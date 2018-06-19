@@ -2,6 +2,7 @@ package mo.dyna.testlibraryproject;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import mo.dyna.testlibrary.TestLibrary;
@@ -13,7 +14,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this, "" +TestLibrary.multiple(1,2), Toast.LENGTH_SHORT).show();
-
+        TextView textView = findViewById(R.id.text_view);
+        textView.setText(TestLibrary.returnResult(4,7));
     }
 }
